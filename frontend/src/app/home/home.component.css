@@ -1,4 +1,155 @@
-*{
-	box-sizing:border-box;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-}
+/* Base styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  /* Layout */
+  .main-container {
+	min-height: 100vh;
+	background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+  }
+
+  .container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1rem;
+  }
+
+  /* Sections */
+  .tech-stack-section,
+  .team-section {
+	padding: 5rem 0;
+	background: #ffffff;
+  }
+
+  .about-section {
+	padding: 5rem 0;
+	background: #000000;
+	color: #ffffff;
+	text-align: center;
+  }
+
+  /* Carousel */
+  .carousel-section {
+	height: 600px;
+	position: relative;
+  }
+
+  .carousel-section img {
+	width: 100%;
+	height: 600px;
+	object-fit: cover;
+  }
+
+  .carousel-caption {
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+  }
+
+  .carousel-caption h1 {
+	font-size: 3.75rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+	color: #ffffff;
+  }
+
+  .carousel-caption p {
+	font-size: 1.25rem;
+	color: #ffffff;
+  }
+
+  /* Grid and Cards */
+  .grid-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+  }
+
+  .card {
+	background: #ffffff;
+	border-radius: 0.5rem;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s;
+  }
+
+  .card:hover {
+	transform: translateY(-5px);
+  }
+
+  .card-header {
+	padding: 1.5rem;
+	border-bottom: 1px solid #e9ecef;
+  }
+
+  .card-body {
+	padding: 1.5rem;
+  }
+
+  /* Typography */
+  .section-title {
+	font-size: 2.5rem;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 4rem;
+  }
+
+  .card-header h3 {
+	font-size: 1.25rem;
+	font-weight: bold;
+	text-transform: capitalize;
+  }
+
+  /* Lists */
+  .card-body ul {
+	list-style-position: inside;
+	padding-left: 1.5rem;
+  }
+
+  .card-body li {
+	font-size: 1.125rem;
+	margin-bottom: 0.5rem;
+  }
+
+  /* Buttons */
+  .contact-button {
+	width: 100%;
+	padding: 0.75rem;
+	background: #000000;
+	color: #ffffff;
+	border: none;
+	border-radius: 0.25rem;
+	cursor: pointer;
+	transition: background-color 0.2s;
+  }
+
+  .contact-button:hover {
+	background: #343a40;
+  }
+
+  /* Media Queries */
+  @media (max-width: 992px) {
+	.grid-container {
+	  grid-template-columns: repeat(2, 1fr);
+	}
+  }
+
+  @media (max-width: 768px) {
+	.carousel-caption h1 { font-size: 2.5rem; }
+	.carousel-caption p { font-size: 1.1rem; }
+	.grid-container { grid-template-columns: 1fr; }
+	.section-title { font-size: 2rem; }
+  }
+
+  @media (max-width: 576px) {
+	.container { padding: 0 0.5rem; }
+	.carousel-caption h1 { font-size: 2rem; }
+  }
